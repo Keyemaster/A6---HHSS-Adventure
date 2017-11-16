@@ -8,12 +8,14 @@ package a6;
  *
  * @author keyew7019
  */
-public class A6 {
+public class HHSSadventure {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        
+        
+        
     }
 }
