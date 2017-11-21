@@ -10,6 +10,8 @@ package a6;
  */
 public class HHSSadventure {
 
+    
+    
     /**
      * @param args the command line arguments
      */
