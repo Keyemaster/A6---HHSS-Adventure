@@ -17,11 +17,11 @@ public class Direction {
             this.Direction = D;
         }
     }
-    
+
     @Override
-    public String toString(){
+    public String toString() {
         String format = "Direction: " + this.Direction + "\n";
-        
+
         return format;
     }
 }
