@@ -14,10 +14,13 @@ import java.util.Scanner;
  */
 public class HHSSadventure {
 
+    Scanner in = null;
+    
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public HHSSadventure() {
+        
 
         FileReader file = null;
         try {
@@ -28,14 +31,19 @@ public class HHSSadventure {
             System.exit(0);
         }
 
-        Scanner in = new Scanner(file);
+        in = new Scanner(file);
 
+
+    }
+
+    public void move() {
         String Location = in.nextLine();
         String Direction = in.next();
-        String variable = in.next();
+        String imagetext = in.next();
         Boolean isBlocked = in.nextBoolean();
-        String newLocation = in.next();
-        String newDirection = in.nextLine();
-
+        if (isBlocked = false) {
+            String newLocation = in.next();
+            String newDirection = in.nextLine();
+        }
     }
 }
