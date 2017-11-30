@@ -37,12 +37,16 @@ public class HHSSadventure {
     }
 
     public void move() {
-        
+        Scene stuff = new Scene();
         //find location
-        for (int i = 0; i < 4; i++) {
+        int i = 0;
+        while (i < 4) {
             String goDirection = in.next();
-            if (goDirection != Scene.Direction) {           //fixfixfixfiXFIXFIXFIX
+            if (goDirection != stuff.Direction()) {           //fixfixfixfiXFIXFIXFIX
                 String ignore = in.nextLine();
+                i++;
+            }else{
+                break;
             }
         }
         String imagetext = in.next();
