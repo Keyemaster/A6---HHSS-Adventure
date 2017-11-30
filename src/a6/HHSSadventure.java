@@ -42,7 +42,7 @@ public class HHSSadventure {
         int i = 0;
         while (i < 4) {
             String goDirection = in.next();
-            if (goDirection != stuff.Direction()) {           //fixfixfixfiXFIXFIXFIX
+            if (goDirection != stuff.Direction()) {
                 String ignore = in.nextLine();
                 i++;
             }else{
