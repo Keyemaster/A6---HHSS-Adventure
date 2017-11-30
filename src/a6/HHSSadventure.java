@@ -15,12 +15,13 @@ import java.util.Scanner;
 public class HHSSadventure {
 
     Scanner in = null;
-    
+    public Scene[] scene;
+    public int position = 0;
+
     /**
      * @param args the command line arguments
      */
     public HHSSadventure() {
-        
 
         FileReader file = null;
         try {
@@ -30,10 +31,8 @@ public class HHSSadventure {
             e.printStackTrace();
             System.exit(0);
         }
-
+        
         in = new Scanner(file);
-
-
     }
 
     public void move() {
@@ -45,5 +44,13 @@ public class HHSSadventure {
             String newLocation = in.next();
             String newDirection = in.nextLine();
         }
+    }
+
+    public String nextDirection() {
+        return scene[position].nextDirection();
+    }
+
+    public static void main(String[] args) {
+        
     }
 }
