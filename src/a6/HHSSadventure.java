@@ -15,12 +15,12 @@ import java.util.Scanner;
 public class HHSSadventure {
 
     Scanner in = null;
-    
+
     /**
      * @param args the command line arguments
      */
     public HHSSadventure() {
-        
+
 
         FileReader file = null;
         try {
@@ -37,13 +37,21 @@ public class HHSSadventure {
     }
 
     public void move() {
-        String Location = in.nextLine();
-        String Direction = in.next();
+        
+        //find location
+        for (int i = 0; i < 4; i++) {
+            String goDirection = in.next();
+            if (goDirection != Scene.Direction) {           //fixfixfixfiXFIXFIXFIX
+                String ignore = in.nextLine();
+            }
+        }
         String imagetext = in.next();
         Boolean isBlocked = in.nextBoolean();
         if (isBlocked = false) {
             String newLocation = in.next();
             String newDirection = in.nextLine();
         }
+    }
+    public static void main(String[] args) {
     }
 }
