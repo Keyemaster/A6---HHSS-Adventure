@@ -23,6 +23,7 @@ public class HHSSadventure {
      */
     public HHSSadventure() {
 
+
         FileReader file = null;
         try {
             URL url = HHSSadventure.class.getResource("pics.txt");
@@ -36,8 +37,18 @@ public class HHSSadventure {
     }
 
     public void move() {
-        String Location = in.nextLine();
-        String Direction = in.next();
+        Scene stuff = new Scene();
+        //find location
+        int i = 0;
+        while (i < 4) {
+            String goDirection = in.next();
+            if (goDirection != stuff.Direction()) {
+                String ignore = in.nextLine();
+                i++;
+            }else{
+                break;
+            }
+        }
         String imagetext = in.next();
         Boolean isBlocked = in.nextBoolean();
         if (isBlocked = false) {
