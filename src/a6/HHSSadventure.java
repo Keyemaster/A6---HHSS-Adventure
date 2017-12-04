@@ -32,8 +32,17 @@ public class HHSSadventure {
             e.printStackTrace();
             System.exit(0);
         }
-        
+
+        Location[] loc = new Location[24];
+
         in = new Scanner(file);
+        in.nextLine();
+        in.nextLine();
+        for (int i = 0; i < 5; i++) {
+            Location l = new Location(in.next());
+            l.getNorth();
+
+        }
     }
 
     public void move() {
@@ -45,7 +54,7 @@ public class HHSSadventure {
             if (goDirection != stuff.Direction()) {
                 String ignore = in.nextLine();
                 i++;
-            }else{
+            } else {
                 break;
             }
         }
@@ -62,6 +71,6 @@ public class HHSSadventure {
     }
 
     public static void main(String[] args) {
-        
+        //
     }
 }

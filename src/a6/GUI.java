@@ -11,7 +11,7 @@ package a6;
 public class GUI extends javax.swing.JFrame {
 
     private HHSSadventure game = new HHSSadventure();
-    
+
     /**
      * Creates new form GUIExample
      */
