@@ -4,9 +4,12 @@
  */
 package a6;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.FileReader;
 import java.net.URL;
 import java.util.Scanner;
+import javax.imageio.ImageIO;
 
 /**
  *
@@ -43,6 +46,16 @@ public class HHSSadventure {
             l.getNorth();
 
         }
+    }
+    
+    private BufferedImage loadImage(String name){
+        BufferedImage img = null;
+        try{
+            img = ImageIO.read(new File("pics.txt"));
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return img;
     }
 
     public void move() {

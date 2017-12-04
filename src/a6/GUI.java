@@ -11,7 +11,7 @@ package a6;
 public class GUI extends javax.swing.JFrame {
 
     private HHSSadventure game = new HHSSadventure();
-
+    
     /**
      * Creates new form GUIExample
      */
@@ -28,24 +28,34 @@ public class GUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        MoveButton = new javax.swing.JButton();
+        LeftButton = new javax.swing.JButton();
+        RightButton = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jImage1 = new a6.JImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jButton1.setText("Move");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        MoveButton.setText("Move");
+        MoveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                MoveButtonActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Left");
+        LeftButton.setText("Left");
+        LeftButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LeftButtonActionPerformed(evt);
+            }
+        });
 
-        jButton3.setText("Right");
+        RightButton.setText("Right");
+        RightButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RightButtonActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("HHSS Adventure");
 
@@ -64,11 +74,11 @@ public class GUI extends javax.swing.JFrame {
                             .addComponent(jImage1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton2)
+                        .addComponent(LeftButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 187, Short.MAX_VALUE)
-                        .addComponent(jButton1)
+                        .addComponent(MoveButton)
                         .addGap(175, 175, 175)
-                        .addComponent(jButton3)))
+                        .addComponent(RightButton)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -80,19 +90,29 @@ public class GUI extends javax.swing.JFrame {
                 .addComponent(jImage1, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton3)
-                    .addComponent(jButton1))
+                    .addComponent(LeftButton)
+                    .addComponent(RightButton)
+                    .addComponent(MoveButton))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void MoveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MoveButtonActionPerformed
         // TODO add your handling code here:
         game.move();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_MoveButtonActionPerformed
+
+    private void LeftButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LeftButtonActionPerformed
+        // TODO add your handling code here:
+        game.turnLeft();
+    }//GEN-LAST:event_LeftButtonActionPerformed
+
+    private void RightButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RightButtonActionPerformed
+        // TODO add your handling code here:
+        game.turnRight();
+    }//GEN-LAST:event_RightButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,9 +149,9 @@ public class GUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton LeftButton;
+    private javax.swing.JButton MoveButton;
+    private javax.swing.JButton RightButton;
     private a6.JImage jImage1;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
