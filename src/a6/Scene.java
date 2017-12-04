@@ -4,6 +4,10 @@
  */
 package a6;
 
+import java.io.FileReader;
+import java.net.URL;
+import java.util.Scanner;
+
 /**
  *
  * @author keyew7019
@@ -12,17 +16,18 @@ public class Scene {
 
     private String direction;
     private String nextL;
-    private String nextD;
+    private String nextDirection;
     private boolean isBlocked;
 
     // Get the direction
-    public String Direction(String D) {
-            this.direction = D;
-            return direction;
+    public String Direction() {
+        // return the direction
+        return direction;
     }
 
     // move to next location
     public void nextLocation() {
+        // if the path is not blocked, go forward one spot
         if (isBlocked == false) {
             nextL = nextL + 1;
         }
@@ -30,10 +35,7 @@ public class Scene {
 
     // get the direction for the new location
     public String nextDirection() {
-        if(nextL == nextL){
-        return direction;
-        }
-        return "";
+        return nextDirection;
     }
 
     // check if pathway is blocked
@@ -45,9 +47,8 @@ public class Scene {
         }
     }
 
-    
-    public void image() {
-        
+    public String image(String name) {
+        return name;
     }
 
     @Override
