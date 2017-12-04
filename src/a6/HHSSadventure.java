@@ -18,6 +18,8 @@ import javax.imageio.ImageIO;
 public class HHSSadventure {
 
     Scanner in = null;
+    public Scene[] scene;
+    public int position = 0;
 
     /**
      * @param args the command line arguments
@@ -34,9 +36,16 @@ public class HHSSadventure {
             System.exit(0);
         }
 
+        Location[] loc = new Location[24];
+
         in = new Scanner(file);
+        in.nextLine();
+        in.nextLine();
+        for (int i = 0; i < 5; i++) {
+            Location l = new Location(in.next());
+            l.getNorth();
 
-
+        }
     }
     
     private BufferedImage loadImage(String name){
@@ -58,7 +67,7 @@ public class HHSSadventure {
             if (goDirection != stuff.Direction()) {
                 String ignore = in.nextLine();
                 i++;
-            }else{
+            } else {
                 break;
             }
         }
@@ -69,6 +78,10 @@ public class HHSSadventure {
             String newDirection = in.nextLine();
         }
     }
+
+    public String nextDirection() {
+        return scene[position].nextDirection();
+    }
     
     public void turnLeft() {
         System.out.println("4");
@@ -77,7 +90,8 @@ public class HHSSadventure {
     public void turnRight() {
         System.out.println("5");
     }
-    
+
     public static void main(String[] args) {
+        //
     }
 }
