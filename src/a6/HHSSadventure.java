@@ -82,6 +82,14 @@ public class HHSSadventure {
     public String nextDirection() {
         return scene[position].nextDirection();
     }
+    
+    public void turnLeft() {
+        System.out.println("4");
+    }
+    
+    public void turnRight() {
+        System.out.println("5");
+    }
 
     public static void main(String[] args) {
         //
