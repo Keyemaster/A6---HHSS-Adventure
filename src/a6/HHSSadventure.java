@@ -4,9 +4,12 @@
  */
 package a6;
 
+import java.awt.image.BufferedImage;
+import java.io.File;
 import java.io.FileReader;
 import java.net.URL;
 import java.util.Scanner;
+import javax.imageio.ImageIO;
 
 /**
  *
@@ -35,6 +38,16 @@ public class HHSSadventure {
 
 
     }
+    
+    private BufferedImage loadImage(String name){
+        BufferedImage img = null;
+        try{
+            img = ImageIO.read(new File("pics.txt"));
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return img;
+    }
 
     public void move() {
         Scene stuff = new Scene();
@@ -56,6 +69,15 @@ public class HHSSadventure {
             String newDirection = in.nextLine();
         }
     }
+    
+    public void turnLeft() {
+        System.out.println("4");
+    }
+    
+    public void turnRight() {
+        System.out.println("5");
+    }
+    
     public static void main(String[] args) {
     }
 }
