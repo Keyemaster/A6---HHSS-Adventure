@@ -15,8 +15,8 @@ import java.util.Scanner;
 public class Scene {
 
     private String direction;
-    private String nextL;
     private String nextDirection;
+    private String nextLocation;
     private boolean isBlocked;
 
     // Get the direction
@@ -25,14 +25,10 @@ public class Scene {
         return direction;
     }
 
-    // move to next location
-    public void nextLocation() {
-        // if the path is not blocked, go forward one spot
-        if (isBlocked == false) {
-            nextL = nextL + 1;
-        }
+    public String nextLocation(){
+        return nextLocation;
     }
-
+    
     // get the direction for the new location
     public String nextDirection() {
         return nextDirection;

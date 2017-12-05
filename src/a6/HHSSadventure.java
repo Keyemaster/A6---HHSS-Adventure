@@ -44,15 +44,15 @@ public class HHSSadventure {
         for (int i = 0; i < 5; i++) {
             Location l = new Location(in.next());
             l.getNorth();
-
+            
         }
     }
-    
-    private BufferedImage loadImage(String name){
+
+    private BufferedImage loadImage(String name) {
         BufferedImage img = null;
-        try{
+        try {
             img = ImageIO.read(new File("pics.txt"));
-        }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         return img;
@@ -74,19 +74,27 @@ public class HHSSadventure {
         String imagetext = in.next();
         Boolean isBlocked = in.nextBoolean();
         if (isBlocked = false) {
-            String newLocation = in.next();
-            String newDirection = in.nextLine();
+            //String newLocation = in.next();
+            //String newDirection = in.nextLine();
+            String newLocation = nextLocation();
+            String newDirection = nextDirection();
         }
     }
 
+    //return the next direction
     public String nextDirection() {
         return scene[position].nextDirection();
+    }
+
+    //return the next direction
+    public String nextLocation() {
+        return scene[position].nextLocation();
     }
     
     public void turnLeft() {
         System.out.println("4");
     }
-    
+
     public void turnRight() {
         System.out.println("5");
     }
