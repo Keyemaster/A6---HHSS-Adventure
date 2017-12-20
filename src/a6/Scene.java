@@ -25,10 +25,10 @@ public class Scene {
         return direction;
     }
 
-    public String nextLocation(){
+    public String nextLocation() {
         return nextLocation;
     }
-    
+
     // get the direction for the new location
     public String nextDirection() {
         return nextDirection;

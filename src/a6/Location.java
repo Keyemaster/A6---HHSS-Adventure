@@ -15,6 +15,8 @@ public class Location {
     private String South;
     private String East;
     private String West;
+    public Scene[] scene;
+    public int position = 0;
 
     // constructor using the name
     public Location(String image) {
@@ -55,6 +57,16 @@ public class Location {
 
     public String getWest() {
         return West;
+    }
+
+    //return the next direction
+    public String nextDirection() {
+        return scene[position].nextDirection();
+    }
+
+    //return the next direction
+    public String nextLocation() {
+        return scene[position].nextLocation();
     }
 
     @Override

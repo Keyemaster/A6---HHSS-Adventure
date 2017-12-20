@@ -18,14 +18,11 @@ import javax.imageio.ImageIO;
 public class HHSSadventure {
 
     Scanner in = null;
-    public Scene[] scene;
-    public int position = 0;
 
     /**
      * @param args the command line arguments
      */
     public HHSSadventure() {
-
 
         FileReader file = null;
         try {
@@ -41,13 +38,23 @@ public class HHSSadventure {
         in = new Scanner(file);
         in.nextLine();
         in.nextLine();
+        //set the direction
         for (int i = 0; i < 5; i++) {
             Location l = new Location(in.next());
-            l.getNorth();
-            
+            in.next();
+            l.setNorth(in.next());
+            l.setEast(in.next());
+            l.setSouth(in.next());
+            l.setWest(in.next());
+
+            loc[i] = l;
+        }
+        for (int i = 0; i < loc.length; i++) {
+            System.out.println(loc[i]);
         }
     }
 
+    //load in the image
     private BufferedImage loadImage(String name) {
         BufferedImage img = null;
         try {
@@ -58,6 +65,7 @@ public class HHSSadventure {
         return img;
     }
 
+    //move forward
     public void move() {
         Scene stuff = new Scene();
         //find location
@@ -73,33 +81,24 @@ public class HHSSadventure {
         }
         String imagetext = in.next();
         Boolean isBlocked = in.nextBoolean();
-        if (isBlocked = false) {
-            //String newLocation = in.next();
-            //String newDirection = in.nextLine();
-            String newLocation = nextLocation();
-            String newDirection = nextDirection();
+        if (stuff.isBlocked() == false) {
+            String newLocation = in.next();
+            String newDirection = in.nextLine();
         }
     }
 
-    //return the next direction
-    public String nextDirection() {
-        return scene[position].nextDirection();
-    }
-
-    //return the next direction
-    public String nextLocation() {
-        return scene[position].nextLocation();
-    }
-    
+    //turn left
     public void turnLeft() {
         System.out.println("4");
     }
 
+    //turn right
     public void turnRight() {
         System.out.println("5");
     }
 
     public static void main(String[] args) {
         //
+        HHSSadventure adv = new HHSSadventure();
     }
 }
