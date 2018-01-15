@@ -79,11 +79,9 @@ public class HHSSadventure {
                 break;
             }
         }
-        String imagetext = in.next();
-        Boolean isBlocked = in.nextBoolean();
         if (stuff.isBlocked() == false) {
-            String newLocation = in.next();
-            String newDirection = in.nextLine();
+            stuff.nextLocation();
+            stuff.nextDirection();
         }
     }
 

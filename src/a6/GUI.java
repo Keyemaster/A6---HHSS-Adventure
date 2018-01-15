@@ -28,7 +28,7 @@ public class GUI extends javax.swing.JFrame {
         initComponents();
         this.game = game;
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -124,9 +124,10 @@ public class GUI extends javax.swing.JFrame {
         game.turnRight();
     }//GEN-LAST:event_RightButtonActionPerformed
 
-    public void setImage(BufferedImage img){
+    public void setImage(BufferedImage img) {
         image.setImage(img);
     }
+
     /**
      * @param args the command line arguments
      */

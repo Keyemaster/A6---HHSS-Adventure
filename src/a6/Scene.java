@@ -42,7 +42,8 @@ public class Scene {
             return false;
         }
     }
-
+    
+    // put in the image
     public String image(String name) {
         return name;
     }
