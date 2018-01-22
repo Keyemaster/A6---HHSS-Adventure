@@ -15,13 +15,20 @@ public class Location {
     private String South;
     private String East;
     private String West;
-    public Scene[] scene;
+
+    private String direction;
+    
+    private String nextDirection;
+    private String nextLocation;
+    
+    private boolean isBlocked;
     public int position = 0;
 
     // constructor using the name
     public Location(String image) {
         this.image = image;
     }
+    
 
     public void setNorth(String north) {
         this.North = north;
@@ -37,10 +44,6 @@ public class Location {
 
     public void setWest(String west) {
         this.West = west;
-    }
-
-    public String getImage() {
-        return image;
     }
 
     public String getNorth() {
@@ -61,17 +64,27 @@ public class Location {
 
     //return the next direction
     public String nextDirection() {
-        return scene[position].nextDirection();
+        return nextDirection;
     }
 
     //return the next direction
     public String nextLocation() {
-        return scene[position].nextLocation();
+        return nextLocation;
+    }
+    
+     // check if pathway is blocked
+    public boolean isBlocked() {
+        if (isBlocked = true) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     @Override
     public String toString() {
         String format = this.image + "\n";
+        
         format += "North: " + this.North + "\n";
         format += "East: " + this.East + "\n";
         format += "South: " + this.South + "\n";

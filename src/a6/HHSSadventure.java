@@ -39,13 +39,14 @@ public class HHSSadventure {
         in.nextLine();
         in.nextLine();
         //set the direction
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 24; i++) {
+           
             Location l = new Location(in.next());
-            in.next();
-            l.setNorth(in.next());
-            l.setEast(in.next());
-            l.setSouth(in.next());
-            l.setWest(in.next());
+            in.nextLine();
+            l.setNorth(in.nextLine());
+            l.setEast(in.nextLine());
+            l.setSouth(in.nextLine());
+            l.setWest(in.nextLine());
 
             loc[i] = l;
         }
