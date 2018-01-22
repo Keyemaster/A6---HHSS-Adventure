@@ -15,6 +15,7 @@ public class Location {
     private String South;
     private String East;
     private String West;
+    public int position = 0;
 
     // constructor using the name
     public Location(String image) {
@@ -37,10 +38,6 @@ public class Location {
         this.West = west;
     }
 
-    public String getImage() {
-        return image;
-    }
-
     public String getNorth() {
         return North;
     }
@@ -55,6 +52,16 @@ public class Location {
 
     public String getWest() {
         return West;
+    }
+
+    //return the next direction
+    public String nextDirection() {
+        return nextDirection();
+    }
+
+    //return the next direction
+    public String nextLocation() {
+        return nextLocation();
     }
 
     @Override

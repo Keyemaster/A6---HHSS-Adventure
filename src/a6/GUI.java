@@ -4,6 +4,8 @@
  */
 package a6;
 
+import java.awt.image.BufferedImage;
+
 /**
  *
  * @author simmg9723
@@ -11,12 +13,20 @@ package a6;
 public class GUI extends javax.swing.JFrame {
 
     private HHSSadventure game = new HHSSadventure();
-    
+
     /**
      * Creates new form GUIExample
      */
     public GUI() {
         initComponents();
+    }
+    
+    /**
+     * Creates new form GUI and links it to our game
+     */
+    public GUI(HHSSadventure game) {
+        initComponents();
+        this.game = game;
     }
 
     /**
@@ -31,8 +41,8 @@ public class GUI extends javax.swing.JFrame {
         MoveButton = new javax.swing.JButton();
         LeftButton = new javax.swing.JButton();
         RightButton = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jImage1 = new a6.JImage();
+        HHSSadventure = new javax.swing.JLabel();
+        image = new a6.JImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -57,7 +67,18 @@ public class GUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel1.setText("HHSS Adventure");
+        HHSSadventure.setText("HHSS Adventure");
+
+        javax.swing.GroupLayout imageLayout = new javax.swing.GroupLayout(image);
+        image.setLayout(imageLayout);
+        imageLayout.setHorizontalGroup(
+            imageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 526, Short.MAX_VALUE)
+        );
+        imageLayout.setVerticalGroup(
+            imageLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 362, Short.MAX_VALUE)
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -67,11 +88,7 @@ public class GUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(13, 13, 13)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(0, 0, Short.MAX_VALUE))
-                            .addComponent(jImage1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addComponent(image, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(LeftButton)
@@ -80,14 +97,18 @@ public class GUI extends javax.swing.JFrame {
                         .addGap(175, 175, 175)
                         .addComponent(RightButton)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(HHSSadventure, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(221, 221, 221))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1)
+                .addComponent(HHSSadventure)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jImage1, javax.swing.GroupLayout.DEFAULT_SIZE, 362, Short.MAX_VALUE)
+                .addComponent(image, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(LeftButton)
@@ -113,6 +134,10 @@ public class GUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         game.turnRight();
     }//GEN-LAST:event_RightButtonActionPerformed
+
+    public void setImage(BufferedImage img) {
+        image.setImage(img);
+    }
 
     /**
      * @param args the command line arguments
@@ -149,10 +174,10 @@ public class GUI extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel HHSSadventure;
     private javax.swing.JButton LeftButton;
     private javax.swing.JButton MoveButton;
     private javax.swing.JButton RightButton;
-    private a6.JImage jImage1;
-    private javax.swing.JLabel jLabel1;
+    private a6.JImage image;
     // End of variables declaration//GEN-END:variables
 }
