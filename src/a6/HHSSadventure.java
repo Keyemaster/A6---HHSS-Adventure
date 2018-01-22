@@ -68,22 +68,8 @@ public class HHSSadventure {
 
     //move forward
     public void move() {
-        Scene stuff = new Scene();
         //find location
-        int i = 0;
-        while (i < 4) {
-            String goDirection = in.next();
-            if (goDirection != stuff.Direction()) {
-                String ignore = in.nextLine();
-                i++;
-            } else {
-                break;
-            }
-        }
-        if (stuff.isBlocked() == false) {
-            stuff.nextLocation();
-            stuff.nextDirection();
-        }
+        
     }
 
     //turn left
@@ -93,7 +79,7 @@ public class HHSSadventure {
 
     //turn right
     public void turnRight() {
-        System.out.println("5");
+        dir = nextDirection();
     }
 
     public static void main(String[] args) {
